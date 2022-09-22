@@ -1,7 +1,5 @@
 body {
-  color: white;
   background-image: linear-gradient(to right, #f5f5f7, #3c3a3a);
-  box-sizing: border-box;
 }
 
 #message{
