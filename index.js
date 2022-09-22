@@ -55,8 +55,6 @@ const displaySearchResult = (phones) => {
 
 
 
-
-
 // Main Body Loading Spinner 
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {

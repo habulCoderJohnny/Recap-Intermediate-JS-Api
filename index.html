@@ -62,14 +62,27 @@
     <!-- header section /-->
 
     <main>
-    <!-- phone-details -->
-    <div id="phone-details" class="mb-4">
-    </div>
 
-    <!-- display search result -->
-    <div id="search-result" class="row row-cols-1 row-cols-md-3 g-5 mb-4">
-    </div>
-    
+        <!-- loading spinner start Here -->
+        <div class="spinner-border text-warning" id="spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <!-- loading spinner end Here -->
+
+        <!-- Given error massage here -->
+        <div>
+            <p id="message" class="fs-1 fw-bolder text-warning text-center">Result not Available <i
+                    class="fas fa-thumbs-up"></i></p>
+        </div>
+        
+        <!-- phone-details -->
+        <div id="phone-details" class="mb-4">
+        </div>
+
+        <!-- display search result -->
+        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-5 mb-4">
+        </div>
+
     </main>
     <!-- External JS -->
     <script src="/index.js"></script>
