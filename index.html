@@ -22,7 +22,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#"><img class="w-25" src="./images/planet-logo.png" alt=""></a>
+                <a class="navbar-brand" href="#"><img class="w-25" src="./images/planet-logo.png" alt=""> 
+                     <h5>Phone <span>Planet</span></h5></a>
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -56,7 +57,7 @@
     </nav>
     <h1 class="text-center my-4">Latest Mobile Phones <span class="text-warning">2022!</span></h1>
     <form class="d-flex w-50 mx-auto" role="search">
-        <input class="form-control me-2" type="search" placeholder="I am Shopping for" aria-label="Search">
+        <input id="search-phone" class="form-control me-2" type="search" placeholder="I am Shopping for" aria-label="Search">
         <button onclick="searchPhone()" id="btn-search" class="btn btn-outline-warning me-2" type="submit">Search</button>
     </form>
     <!-- header section /-->
@@ -71,12 +72,12 @@
 
         <!-- Given error massage here -->
         <div>
-            <p id="message" class="fs-1 fw-bolder text-warning text-center">Result not Available <i
+            <p id="message" class="fw-bolder text-danger text-center my-5">Result not Available <i
                     class="fas fa-thumbs-up"></i></p>
         </div>
 
         <!-- phone-details -->
-        <div id="phone-details" class="mb-4">
+        <div id="phone-details" class="my-5">
         </div>
 
         <!-- display search result -->

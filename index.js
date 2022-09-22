@@ -35,13 +35,14 @@ const displaySearchResult = (phones) => {
                 div.classList.add('col');
                 div.innerHTML =
                     `
-        <div class="card h-auto d-flex flex-column align-items-center ">
-        <img src="${phone.image}" class="card-img-top w-50" alt="...">
+        <div class="card h-100 d-flex flex-column align-items-center border-warning rounded">
+        <img src="${phone.image}" class="card-img-top w-50 my-2" alt="...">
         <div class="card-body d-flex flex-column align-items-start ">
           <h5 class="card-title text-primary">Phone Name: ${phone.phone_name}</h5>
-          <p class="card-text fw-bolder text-primary">Brand: ${phone.brand}</p>
+          <p class="card-text fw-bolder text-danger">Brand: ${phone.brand}</p>
           <div class="text-center">
-          <button onclick="loadPhoneById('${phone.slug}')" type="button" class="btn btn-primary ">Details</button></div>
+          <button onclick="loadPhoneById('${phone.slug}')" type="button" class="btn btn-warning">Details</button>
+          </div>
         </div>
       </div> `;
                 SearchResult.appendChild(div);
