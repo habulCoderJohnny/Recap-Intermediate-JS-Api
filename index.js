@@ -57,6 +57,35 @@ const loadPhoneById = phoneId => {
   .then(json => displayPhoneById(json.data))
 }
 
+// phone details part |get id| create div, add card and phone details
+const displayPhoneById = phone => {
+  // console.log(phone);
+  const phoneDetails = document.getElementById('phone-details');
+  phoneDetails.textContent = ''; //← ← clear previous phone details
+  const div = document.createElement('div');
+  div.classList.add('card');
+  div.innerHTML = `
+<div class="card h-100 w-100 p-2">
+    <img src="${phone.image}" class="card-img-top w-50" alt="...">
+<div class="card-text fw-bolder text-primary">
+   <div class="card-body card-text fw-bolder text-primary d-flex flex-column align-items-center container-sm">
+    <p>Brand: ${phone.brand}</p>
+    <h5 class="card-title text-danger">Phone Name: ${phone.name}</h5>
+    <u>Release Date: ${phone.releaseDate ? phone.releaseDate : 'Release Date Not Available!'}</u>
+    <p>Storage: ${phone.mainFeatures.storage}</p> 
+    <p>Memory: ${phone.mainFeatures.memory}</p>
+    <p>Display: ${phone.mainFeatures.displaySize}</p>
+    <p>Chipset: ${phone.mainFeatures.chipSet}</p>
+    <p class="text-break">Sensor: ${phone.mainFeatures.sensors}</p>
+    <p class="text-break">WLAN: ${phone.others.WLAN}</p>
+    <p class="text-break">GPS: ${phone.others.GPS}</p>
+    <p class="text-break">Bluetooth:${phone.others.Bluetooth}</p>
+    <p class="text-break">NFC: ${phone.others.NFC}, Radio: ${phone.others.Radio}</p>
+    <p class="text-break">USB: ${phone.others.USB}</p>  
+   </div>   
+</div>`;
+phoneDetails.appendChild(div);
+}
 
 
 
